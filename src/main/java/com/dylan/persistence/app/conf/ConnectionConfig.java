@@ -25,7 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author boniface
  */
 @Configuration
-@ComponentScan("com.dylan.askweb")
+@ComponentScan("com.dylan.persistence")
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.dylan.persistence.repository")
 public class ConnectionConfig {

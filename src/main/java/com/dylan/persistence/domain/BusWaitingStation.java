@@ -94,20 +94,19 @@ public class BusWaitingStation implements Serializable{
     
     @Override
     public int hashCode() {
-        int hash = 3;
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof BusWaitingStation)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final BusWaitingStation other = (BusWaitingStation) obj;
-        if (!Objects.equals(this.id, other.id)) {
+        BusWaitingStation other = (BusWaitingStation) object;
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;

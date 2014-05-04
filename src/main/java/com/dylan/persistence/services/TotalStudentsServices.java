@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 
-package com.dylan.persistence.repository;
+package com.dylan.persistence.services;
 
 import com.dylan.persistence.domain.BusWaitingStation;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import java.io.Serializable;
+import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Dylan
  */
-public interface BusWaitingStationRepository extends JpaRepository<BusWaitingStation, Long>{
-    
+@Service
+public interface TotalStudentsServices {
+    public List<BusWaitingStation> getTotalPeople();
 }
